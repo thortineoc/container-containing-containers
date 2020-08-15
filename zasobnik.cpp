@@ -2,6 +2,7 @@
 #include "zasobnik.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Zasobnik::Zasobnik(): head(nullptr), tail(nullptr) {}
 Zasobnik::~Zasobnik() {
     node* ptr = tail;
@@ -92,6 +93,8 @@ double Zasobnik::usun(size_t ilosc) {
             break;
         }
 =======
+=======
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 Zasobnik::Zasobnik() {
     head = nullptr;
     tail = nullptr;
@@ -141,6 +144,9 @@ size_t Zasobnik::liczba_pojemnikow() { // ilość elementów na liście,
     while(ptr) {
         sum++;
         ptr = ptr->next;
+<<<<<<< HEAD
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
+=======
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
     }
     return sum;
@@ -151,7 +157,11 @@ void Zasobnik::dolej(double ilosc) {
     node* ptr = head;
     for(unsigned int i=0; i<liczba_pojemnikow(); i++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(ptr->data->pokaz_zawartosc() == ptr->data->pokaz_pojemnosc()) { // jezeli pelen
+=======
+        if(ptr->data->pokazZawartosc() == ptr->data->pokazPojemnosc()) { // jezeli pelen
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 =======
         if(ptr->data->pokazZawartosc() == ptr->data->pokazPojemnosc()) { // jezeli pelen
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
@@ -163,7 +173,11 @@ void Zasobnik::dolej(double ilosc) {
             return; // jak sie uda wlac do koncze funkcje
         } catch(Przepelnienie &ex) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             cout << "Za duzo o " << ex.errNo() << " litr/y/ow. Probuje przelac do kolejnego" << endl;
+=======
+            cout << "Za duzo o " << ex.errNo() << " litrow" << endl;
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 =======
             cout << "Za duzo o " << ex.errNo() << " litrow" << endl;
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
@@ -175,6 +189,7 @@ void Zasobnik::dolej(double ilosc) {
 }
 
 double Zasobnik::pobierz(double ilosc) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     double pobrano = 0;
     double reszta = ilosc;
@@ -202,6 +217,8 @@ void Zasobnik::substancja(string str) {
     } catch(string ex) { // nie bylo podane w poleceniu jakiego typu wyjatek ma byc rzucany w tym miejscu
         cout << "UWAGA! Wyjatek, blad: " << ex << endl;
 =======
+=======
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
     double sum = 0;
     double do_pobrania = ilosc;
     for(long i=(long)liczba_pojemnikow(); i>=0; i--) { // od konca sprawdzam
@@ -239,6 +256,9 @@ void Zasobnik::substancja(string str) {
         head->data->substancja(str);
     } catch(int ex) {
         cout << "Wyjatek, nie mozna zmienic nazwy substancji, err=" << ex << endl;
+<<<<<<< HEAD
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
+=======
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
     }
 }
@@ -247,8 +267,13 @@ double Zasobnik::pojemnosc() { // sumaryczna pojemność kontenera,
     double sum = 0;
     node* ptr = head;
 <<<<<<< HEAD
+<<<<<<< HEAD
     while(ptr) {
         sum += ptr->data->pokaz_pojemnosc();
+=======
+    while(ptr){
+        sum += ptr->data->pokazPojemnosc();
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 =======
     while(ptr){
         sum += ptr->data->pokazPojemnosc();
@@ -262,8 +287,13 @@ double Zasobnik::zajetosc() { // sumaryczna pojemność kontenera,
     double sum = 0;
     node* ptr = head;
 <<<<<<< HEAD
+<<<<<<< HEAD
     while(ptr) {
         sum += ptr->data->pokaz_zawartosc();
+=======
+    while(ptr){
+        sum += ptr->data->pokazZawartosc();
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 =======
     while(ptr){
         sum += ptr->data->pokazZawartosc();

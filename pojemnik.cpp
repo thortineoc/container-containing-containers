@@ -12,6 +12,7 @@ Dekonstrukcja::Dekonstrukcja() { nazwa = "Dekonstrukcja"; };
 const char* Dekonstrukcja::what() const noexcept { return nazwa; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Pojemnik::Pojemnik(double poj): zawartosc(0), pojemnosc(poj), nazwa("") {}
 
 double Pojemnik::pokaz_pojemnosc() const { return pojemnosc; }
@@ -25,24 +26,35 @@ ostream &operator<<(ostream &out, const Pojemnik &p) {
     if(!p.substancja().empty()) {
         out << "Ten plyn to " << p.substancja() << endl;
 =======
+=======
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 ostream &operator<<(ostream &out, Pojemnik &p) {
     out << "Oto opis twojego pojemnika!" << endl;
     out << "Jego pojemnosc wynosi " << p.pojemnosc << " litrow" << endl;
     out << "Jest w nim aktualnie " << p.zawartosc << " litrow plynu" << endl;
     if(!p.nazwa.empty()) {
         out << "Ten plyn to " << p.nazwa << endl;
+<<<<<<< HEAD
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
+=======
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
     }
     return out;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 Pojemnik::Pojemnik(double poj) {
     pojemnosc = poj;
     zawartosc = 0;
 }
 
+<<<<<<< HEAD
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
+=======
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 void Pojemnik::dolej(double ilosc) {
     if(zawartosc + ilosc > pojemnosc) {  // nie miesci sie
@@ -64,19 +76,29 @@ double Pojemnik::pobierz(double ilosc) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 string Pojemnik::substancja() {
     return nazwa;
 }
 
+<<<<<<< HEAD
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
+=======
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 void Pojemnik::substancja(string str) {
     if(!zawartosc) {
         nazwa = str;
     } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
         string ex = "Substancja";
         throw ex;
+=======
+        throw -1;
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 =======
         throw -1;
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
@@ -90,7 +112,10 @@ bool Pojemnik::min_objetosc (double ilosc) {
 bool Pojemnik::max_objetosc(double ilosc) {
     return zawartosc + ilosc <= pojemnosc; // jezeli nie przekroczy to true
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 }
 
 double Pojemnik::pokazPojemnosc() {
@@ -99,5 +124,8 @@ double Pojemnik::pokazPojemnosc() {
 
 double Pojemnik::pokazZawartosc() {
     return zawartosc;
+<<<<<<< HEAD
+>>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
+=======
 >>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 }
