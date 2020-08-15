@@ -11,15 +11,7 @@ public:
     double errNo();
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class Dekonstrukcja: public exception {
-=======
-class Dekonstrukcja: public exception{
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
-=======
-class Dekonstrukcja: public exception{
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
     const char* nazwa;
 public:
     Dekonstrukcja();
@@ -27,8 +19,6 @@ public:
 };
 
 class Pojemnik {
-<<<<<<< HEAD
-<<<<<<< HEAD
     double zawartosc;
     double pojemnosc;
     string nazwa;
@@ -46,38 +36,10 @@ public:
     Pojemnik &operator=(Pojemnik &p)=delete;
 };
 ostream &operator<<(ostream &out, const Pojemnik &p);
-=======
-=======
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
-    string nazwa;
-    double pojemnosc;
-    double zawartosc;
-public:
-    Pojemnik(double = 0);
-    Pojemnik(Pojemnik &&);
-    double pokazPojemnosc();
-    double pokazZawartosc();
-    void dolej(double);
-    double pobierz(double);
-    string substancja(void);
-    void substancja(string);
-    bool min_objetosc(double);
-    bool max_objetosc(double);
-    Pojemnik(Pojemnik &)=delete; // zabronione kopiowanie
-    Pojemnik &operator=(Pojemnik &)=delete;
-
-    friend ostream &operator<<(ostream &out, Pojemnik &p);
-};
-<<<<<<< HEAD
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
-=======
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 
 struct node {
     Pojemnik* data;
     node* next;
-<<<<<<< HEAD
-<<<<<<< HEAD
     node* prev;
 };
 
@@ -88,24 +50,6 @@ class Zasobnik {
 public:
     Zasobnik();
     ~Zasobnik();
-=======
-=======
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
-};
-
-class Zasobnik {
-    node* head;
-    node* tail;
-    void wstawPoj(Pojemnik* p);
-    void usunPoj(Pojemnik* p);
-    //clean
-public:
-    Zasobnik();
-    //~Zasobnik();
-<<<<<<< HEAD
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
-=======
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
     void dodaj(double, size_t = 1);
     double usun(size_t = 1);
     void dolej(double);
@@ -114,29 +58,11 @@ public:
     void substancja(string);
     bool min_objetosc(double);
     bool max_objetosc(double);
-<<<<<<< HEAD
-<<<<<<< HEAD
     size_t liczba_pojemnikow();
     double pojemnosc();
-=======
-    size_t liczba_pojemnikow(); // ilość elementów na liście,
-    double pojemnosc();  // sumaryczna pojemność kontenera,
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
-=======
-    size_t liczba_pojemnikow(); // ilość elementów na liście,
-    double pojemnosc();  // sumaryczna pojemność kontenera,
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
     double zajetosc();
     Zasobnik(Zasobnik &)=delete; // zabronione kopiowanie
     Zasobnik &operator=(Zasobnik &)=delete;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     friend ostream &operator<<(ostream &out, const Zasobnik &z); // zeby mial dostep do head
-=======
-    friend ostream &operator<<(ostream &out, Zasobnik &z);
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
-=======
-    friend ostream &operator<<(ostream &out, Zasobnik &z);
->>>>>>> d28cd7621256a6b4d85846a1a2d29327860a77ad
 };
